@@ -5,6 +5,7 @@
 
 \usepackage[orientation=landscape,size=custom,width=16,height=9,scale=0.5]{beamerposter}
 \usepackage{ulem}
+\usepackage{graphicx}
 
 % Title page starts here.
 \title{PDXPUG}
@@ -12,8 +13,16 @@
 \author[gorthx markwkm]{Gabrielle Roth - gorthx@gmail.com\\Mark Wong - markwkm@postgresql.org}
 %\institute{Portland State University}
 \date{September 6, 2014}
+%\titlegraphic{\centering\includegraphics[width=4cm]{pdxpug-logo.png}}
 
 \begin{document}
+
+\frame
+{
+  \begin{center}
+  \includegraphics[scale=1]{pdxpug-logo.png}
+  \end{center}
+}
 
 \frame{\titlepage}
 
@@ -21,7 +30,7 @@
 
 \frame[containsverbatim]
 {
-  \frametitle{OHAI!}
+  \frametitle{ASCII Elephant}
 
   \begin{verbatim}
           __     __
@@ -32,6 +41,37 @@
 ^ \   /___\  /\ |
    |__|   |__|-"
   \end{verbatim}
+}
+
+\frame
+{
+  \frametitle{Breeding Crochet Elephants}
+
+  \begin{center}
+  \includegraphics[width=8cm]{chelnik-pyramid.jpg}
+  \end{center}
+}
+
+\frame
+{
+  \frametitle{PDXPUG}
+
+  Portland PostgreSQL Users Group
+
+  www.pdxpug.org
+
+  @pdxpug
+
+  pdxpug@postgresql.org
+
+  Meet every 3rd Thursday of the month, most of the year
+
+  Hosted by Iovation in the US Bank Tower
+}
+
+\frame
+{
+  \frametitle{Meeting Topics}
 }
 
 \frame[containsverbatim]
