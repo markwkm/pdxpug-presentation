@@ -1,16 +1,14 @@
-name=pdxpug-presentation
+.PHONY: all clean
 
-all: $(name).pdf
+TEX=$(wildcard *.tex)
+STY=$(wildcard *.sty)
 
-%.pdf: %.tex Makefile
-	-rm $@
+all: $(patsubst %.tex, %.pdf, $(TEX))
+
+%.pdf: %.tex Makefile $(STY)
 	latex -output-format=pdf $<
 	latex -output-format=pdf $<
+	-rm $*.aux $*.log $*.nav $*.out $*.snm $*.toc
 
 clean:
-	rm -f $(name)*.log $(name)*.toc $(name)*.nav $(name)*.snm \
-			$(name)*.out $(name)*.dvi $(name)*.aux \
-			$(name)*.vrb texput.log *.eps
-
-realclean: clean
-	rm -f $(name)*.pdf
+	-rm *.pdf
